@@ -1,0 +1,27 @@
+@import './utils/mixins';
+@import './utils/variables';
+
+.page {
+  background-color: var(--hover-background-color);
+
+  color: var(--text-color);
+}
+
+.outletWrapper {
+  min-height: calc(100vh - 257px);
+  padding-bottom: 56px;
+  padding-top: 72px;
+
+  @include on-tablet {
+    min-height: calc(100vh - 96px);
+    padding-bottom: 64px;
+  }
+
+  @include on-desktop {
+    min-height: calc(100vh - 96px);
+    max-width: 1136px;
+    margin: 0 auto;
+    padding-bottom: 80px;
+    padding-top: 88px;
+  }
+}
